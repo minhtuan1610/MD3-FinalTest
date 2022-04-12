@@ -1,5 +1,5 @@
 use ProductManagement;
 
-select p.id, product_name, price, quantity, color, type
+select p.id, product_name, price, quantity, color, id_category, type
 from category
          join product p on category.id = p.id_category;

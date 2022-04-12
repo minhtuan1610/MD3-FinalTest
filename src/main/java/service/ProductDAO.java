@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductDAO implements IProductDAO {
-    private static final String SELECT_ALL_PRODUCT = "select p.id, product_name, price, quantity, color, type\n" +
+    private static final String SELECT_ALL_PRODUCT = "select p.id, product_name, price, quantity, color, id_category, type\n" +
             "from category join product p on category.id = p.id_category;";
 
     @Override
@@ -25,7 +25,7 @@ public class ProductDAO implements IProductDAO {
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("product_name");
-                Double price = resultSet.getDouble("price");
+                double price = resultSet.getDouble("price");
                 int quantity = resultSet.getInt("quantity");
                 String color = resultSet.getString("color");
                 int id_category = resultSet.getInt("id_category");

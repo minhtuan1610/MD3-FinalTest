@@ -25,12 +25,12 @@
         </tr>
         <c:forEach var="list" items="${pList}">
             <tr>
-                <td><c:out value="${list.id}"/></td>
-                <td><c:out value="${list.name}"/></td>
-                <td><c:out value="${list.price}"/></td>
-                <td><c:out value="${list.quantity}"/></td>
-                <td><c:out value="${list.color}"/></td>
-                <td><c:out value="${list.category.getCategory()}"/></td>
+                <td><c:out value="${list.getId()}"/></td>
+                <td><c:out value="${list.getName()}"/></td>
+                <td><c:out value="${list.getPrice()}"/></td>
+                <td><c:out value="${list.getQuantity()}"/></td>
+                <td><c:out value="${list.getColor()}"/></td>
+                <td><c:out value="${list.getCategory().getCategory()}"/></td>
             </tr>
         </c:forEach>
     </table>
