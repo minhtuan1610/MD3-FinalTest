@@ -1,0 +1,19 @@
+create database ProductManagement;
+use ProductManagement;
+
+create table product
+(
+    id           int auto_increment primary key,
+    product_name varchar(100),
+    price        double,
+    quantity     int,
+    color        varchar(50),
+    id_category  int,
+    foreign key (id_category) references category (id)
+);
+
+create table category
+(
+    id   int auto_increment primary key,
+    type varchar(50)
+);

@@ -1,0 +1,10 @@
+use ProductManagement;
+
+insert into category (type)
+values ('Phone');
+
+insert into category (type)
+values ('Television');
+
+insert into product(product_name, price, quantity, color, id_category)
+VALUES ('iPhone 11', 799.0, 12, 'Purple, Yellow, Green', 1);
